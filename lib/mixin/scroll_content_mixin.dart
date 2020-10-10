@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/domain/interfaces/scroll_content.dart';
 
-mixin HomeHeaderMixin on ScrollContent {
+mixin ScrollContentMixin {
+  ScrollController get controller;
+
+  double get height;
+
   void _animateTo(double page) => controller?.animateTo(
         page ?? 0,
         duration: const Duration(milliseconds: 300),
@@ -10,5 +13,5 @@ mixin HomeHeaderMixin on ScrollContent {
 
   void goToHome() => _animateTo(0);
 
-  void goToProjects() => _animateTo(size?.height);
+  void goToProjects() => _animateTo(height);
 }

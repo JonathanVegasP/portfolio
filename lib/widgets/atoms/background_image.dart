@@ -15,7 +15,10 @@ class BackgroundImage extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: child,
+      child: Material(
+        color: Colors.transparent,
+        child: child,
+      ),
     );
   }
 }
