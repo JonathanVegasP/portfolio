@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 
 class BackgroundGradient extends StatelessWidget {
   final Widget child;
+  final List<Color> colors;
 
-  const BackgroundGradient({Key key, @required this.child}) : super(key: key);
+  const BackgroundGradient({
+    Key key,
+    this.colors = const [Colors.tealAccent, Colors.teal],
+    @required this.child,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: const [Colors.tealAccent, Colors.teal],
+          colors: colors,
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),

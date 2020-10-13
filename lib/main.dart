@@ -28,9 +28,7 @@ class _RootAppState extends State<RootApp> with InitResourcesMixin<RootApp> {
         primaryColor: Colors.teal,
         textTheme: GoogleFonts.latoTextTheme(),
       ),
-      home: HomeScreen(
-
-      ),
+      home: HomeScreen(),
     );
   }
 }

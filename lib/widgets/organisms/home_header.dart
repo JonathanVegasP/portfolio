@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/tools/dependency_injection.dart';
 import 'package:portfolio/mixin/scroll_content_mixin.dart';
 import 'package:portfolio/widgets/atoms/app_bar.dart';
 import 'package:portfolio/widgets/atoms/dismiss_keyboard.dart';
 import 'package:portfolio/widgets/atoms/text_button.dart';
 import 'package:portfolio/widgets/molecules/drawer.dart';
+import 'package:portfolio/widgets/molecules/social_buttons.dart';
 
 class HomeHeader extends StatelessWidget with ScrollContentMixin {
   final Widget child;
@@ -13,10 +15,10 @@ class HomeHeader extends StatelessWidget with ScrollContentMixin {
 
   const HomeHeader({
     Key key,
-    this.controller,
-    this.height,
-    this.child,
-    this.width,
+    @required this.controller,
+    @required this.height,
+    @required this.child,
+    @required this.width,
   }) : super(key: key);
 
   @override
@@ -31,6 +33,10 @@ class HomeHeader extends StatelessWidget with ScrollContentMixin {
               onPressed: goToHome,
               text: 'HOME',
               color: Colors.white,
+            ),TextButtonWidget(
+              onPressed: goToAbout,
+              text: 'ABOUT',
+              color: Colors.white,
             ),
             TextButtonWidget(
               onPressed: goToProjects,
@@ -42,6 +48,7 @@ class HomeHeader extends StatelessWidget with ScrollContentMixin {
         drawer: width < 1024
             ? DrawerWidget(controller: controller, height: height)
             : null,
+        floatingActionButton: SocialButtons(service()),
         body: child,
       ),
     );

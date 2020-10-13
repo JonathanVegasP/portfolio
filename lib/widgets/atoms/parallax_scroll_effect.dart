@@ -6,16 +6,16 @@ import 'package:portfolio/mixin/parallax_scroll_effect.dart';
 class ParallaxScrollEffect extends StatelessWidget
     with ParallaxScrollEffectMixin {
   final Widget parallaxChild;
-  final Widget child;
+  final List<Widget> children;
   final double height;
   final ScrollController controller;
 
   ParallaxScrollEffect({
     Key key,
-    this.parallaxChild,
-    this.child,
-    this.height,
-    this.controller,
+    @required this.parallaxChild,
+    this.children = const [],
+    @required this.height,
+    @required this.controller,
   }) : super(key: key);
 
   @override
@@ -27,15 +27,17 @@ class ParallaxScrollEffect extends StatelessWidget
         child: Stack(
           children: [
             Observer(
-              (_) => Positioned(
-                top: -.25 * offset.value,
-                child: parallaxChild,
-              ),
+              (_) => offset.value < height
+                  ? Positioned(
+                      top: -.25 * offset.value,
+                      child: parallaxChild,
+                    )
+                  : const SizedBox(),
             ),
             ListView(
               controller: controller,
               padding: EdgeInsets.zero,
-              children: [SizedBox(height: height), child],
+              children: [SizedBox(height: height), ...children],
             ),
           ],
         ),

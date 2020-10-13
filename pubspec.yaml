@@ -35,6 +35,9 @@ dependencies:
   flutter_tools:
     git: https://github.com/JonathanVegasP/flutter_tools.git
   font_awesome_flutter: any
+  transparent_image: any
+  url_launcher: any
+  flutter_svg: any
 
 dev_dependencies:
   flutter_test:

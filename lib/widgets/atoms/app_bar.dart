@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends AppBar {
   AppBarWidget({
-    double width,
+    @required double width,
     List<Widget> actions,
   }) : super(
           elevation: 0,

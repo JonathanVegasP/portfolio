@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/atoms/background_gradient.dart';
-import 'package:portfolio/widgets/atoms/background_image.dart';
 import 'package:portfolio/widgets/atoms/parallax_scroll_effect.dart';
+import 'package:portfolio/widgets/molecules/about.dart';
 import 'package:portfolio/widgets/molecules/profile.dart';
 
 class HomeContent extends StatelessWidget {
   final ScrollController controller;
   final double height;
   final double width;
+  final Widget child;
 
   const HomeContent({
     Key key,
-    this.controller,
-    this.height,
-    this.width,
+    @required this.controller,
+    @required this.height,
+    @required this.width,
+    @required this.child,
   }) : super(key: key);
 
   @override
@@ -22,17 +23,20 @@ class HomeContent extends StatelessWidget {
       parallaxChild: SizedBox(
         height: height,
         width: width,
-        child: const BackgroundGradient(
-          child: Center(
-            child: ProfileWidget(),
-          ),
+        child: const ProfileWidget(),
+      ),
+      children: [
+        SizedBox(
+          height: height,
+          width: width,
+          child: AboutWidget(width: width),
         ),
-      ),
-      child: SizedBox(
-        height: height,
-        width: width,
-        child: const BackgroundImage(),
-      ),
+        SizedBox(
+          height: height,
+          width: width,
+          child: child,
+        ),
+      ],
       height: height,
       controller: controller,
     );
