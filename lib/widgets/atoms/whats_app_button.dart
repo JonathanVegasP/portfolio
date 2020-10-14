@@ -11,7 +11,7 @@ class WhatsAppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
-      child: Icon(FontAwesomeIcons.whatsapp, size: 30),
+      child: const Icon(FontAwesomeIcons.whatsapp, size: 30),
       backgroundColor: AppColors.whats_app,
     );
   }

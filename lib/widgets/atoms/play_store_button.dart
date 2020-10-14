@@ -15,7 +15,9 @@ class PlayStoreButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Image.asset(AppImages.play_store,),
+      child: Image.asset(
+        AppImages.play_store,
+      ),
       style: TextButton.styleFrom(
         primary: color,
         onSurface: color,

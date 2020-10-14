@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/atoms/draggable.dart';
+import 'package:portfolio/widgets/atoms/phone.dart';
 
-class ProjectContainer extends StatelessWidget {
+class ProjectWrapper extends StatelessWidget {
   final Widget projectChild;
   final List<Widget> detailsChildren;
 
-  const ProjectContainer({
+  const ProjectWrapper({
     Key key,
     @required this.projectChild,
     @required this.detailsChildren,
@@ -17,7 +18,7 @@ class ProjectContainer extends StatelessWidget {
       width: 290,
       child: Row(
         children: [
-          DraggableWidget(child: projectChild),
+          DraggableWidget(child: PhoneWidget(child: projectChild)),
           const SizedBox(width: 15),
           Flexible(
             child: Column(

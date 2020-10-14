@@ -12,13 +12,13 @@ class HelloWorldProject extends StatelessWidget {
       primary: false,
       appBar: AppBar(
         primary: false,
-        title: TextWidget(
+        title: const TextWidget(
           'Hello World',
           textType: TextType.small,
         ),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: TextWidget(
           'Hello World',
           color: Colors.black,

@@ -26,9 +26,7 @@ class DrawerWidget extends StatelessWidget with ScrollContentMixin {
             children: [
               const DrawerHeader(
                 child: Align(
-                  child: AvatarWidget(
-                    height: double.infinity,
-                  ),
+                  child: AvatarWidget(),
                 ),
               ),
               DrawerTile(

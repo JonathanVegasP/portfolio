@@ -10,7 +10,7 @@ class GmailButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
-      child: Icon(Icons.email, size: 30),
+      child: const Icon(Icons.email, size: 30),
       backgroundColor: AppColors.gmail,
     );
   }

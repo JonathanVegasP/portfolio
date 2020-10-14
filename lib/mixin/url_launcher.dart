@@ -10,4 +10,12 @@ mixin UrlLauncherMixin {
   void helloWorldProject() => service.launch(
         'https://play.google.com/store/apps/details?id=com.jonathanvegasp.hello_world',
       );
+
+  void flixAndroid() {}
+
+  void flixIos() {}
+
+  void xprajaAndroid() {}
+
+  void xprajaIos() {}
 }

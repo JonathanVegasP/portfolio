@@ -12,7 +12,6 @@ class AboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BackgroundGradient(
-      colors: [Colors.orange, Colors.deepOrange[600]],
       child: Center(
         child: Stack(
           alignment: Alignment.topCenter,
@@ -22,36 +21,34 @@ class AboutWidget extends StatelessWidget {
               child: SizedBox(
                 width: width < 768 ? 300 : 600,
                 child: Card(
-                  color: Colors.transparent,
                   margin: const EdgeInsets.only(
                     right: 15,
                     left: 15,
                     bottom: 15,
                   ),
-                  child: BackgroundGradient(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 50,
-                        right: 15,
-                        left: 15,
-                        bottom: 15,
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          TextWidget(
-                            'About Me',
-                            textType: TextType.title,
-                            color: Colors.white,
-                            textAlign: TextAlign.justify,
-                          ),
-                          TextWidget(
-                            "I'm a Developer that felt in love with Mobile "
-                            'development',
-                            textAlign: TextAlign.center,
-                          )
-                        ],
-                      ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 50,
+                      right: 15,
+                      left: 15,
+                      bottom: 15,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextWidget(
+                          'About Me\n',
+                          textType: TextType.title,
+                          color: Colors.grey[800],
+                          textAlign: TextAlign.justify,
+                        ),
+                        TextWidget(
+                          "I'm a Developer that felt in love with Mobile "
+                          'development',
+                          textAlign: TextAlign.center,
+                          color: Colors.grey[800],
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -59,9 +56,7 @@ class AboutWidget extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.only(top: 15),
-              child: AvatarWidget(
-                height: 100,
-              ),
+              child: AvatarWidget(height: 100),
             ),
           ],
         ),

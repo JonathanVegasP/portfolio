@@ -10,7 +10,7 @@ class DraggableWidget extends StatelessWidget {
     return Draggable(
       child: child,
       feedback: child,
-      childWhenDragging: SizedBox(),
+      childWhenDragging: const SizedBox(),
     );
   }
 }

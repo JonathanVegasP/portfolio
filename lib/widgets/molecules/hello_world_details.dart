@@ -6,7 +6,7 @@ class HelloWorldDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextWidget(
+    return const TextWidget(
       "This is my first app that I've uploaded to Play Store at my account",
       textAlign: TextAlign.center,
     );

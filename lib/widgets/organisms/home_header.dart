@@ -33,7 +33,8 @@ class HomeHeader extends StatelessWidget with ScrollContentMixin {
               onPressed: goToHome,
               text: 'HOME',
               color: Colors.white,
-            ),TextButtonWidget(
+            ),
+            TextButtonWidget(
               onPressed: goToAbout,
               text: 'ABOUT',
               color: Colors.white,
@@ -48,7 +49,7 @@ class HomeHeader extends StatelessWidget with ScrollContentMixin {
         drawer: width < 1024
             ? DrawerWidget(controller: controller, height: height)
             : null,
-        floatingActionButton: SocialButtons(service()),
+        floatingActionButton:  SocialButtons(service()),
         body: child,
       ),
     );
