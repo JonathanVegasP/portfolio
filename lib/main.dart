@@ -23,7 +23,8 @@ class _RootAppState extends State<RootApp> with InitResourcesMixin<RootApp> {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: const [Locale('pt', 'BR')],
-      title: 'Jonathan Vegas Peixoto',
+      title: 'Jonathan Vegas Peixoto - Portfolio',
+      color: Colors.teal,
       theme: ThemeData(
         primaryColor: Colors.teal,
         textTheme: GoogleFonts.latoTextTheme(),
