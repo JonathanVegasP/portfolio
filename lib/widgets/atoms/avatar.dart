@@ -21,7 +21,7 @@ class AvatarWidget extends StatelessWidget {
           ? FadeInImage.memoryNetwork(
               height: height,
               placeholder: kTransparentImage,
-              image: AppImages.avatar,
+              image: 'assets/${AppImages.avatar}',
               fit: fit,
             )
           : Image.asset(

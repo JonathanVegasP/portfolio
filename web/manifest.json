@@ -1,11 +1,11 @@
 {
-    "name": "Portfolio",
-    "short_name": "Portfolio",
+    "name": "Jonathan Vegas Peixoto - Portfolio",
+    "short_name": "Jonathan",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Portfolio",
+    "description": "Jonathan Vegas Peixoto - Portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
