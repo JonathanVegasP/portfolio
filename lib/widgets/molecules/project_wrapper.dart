@@ -21,10 +21,12 @@ class ProjectWrapper extends StatelessWidget {
           DraggableWidget(child: PhoneWidget(child: projectChild)),
           const SizedBox(width: 15),
           Flexible(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: detailsChildren,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: detailsChildren,
+              ),
             ),
           ),
         ],

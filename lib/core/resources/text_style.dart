@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum TextType { h1, h2, h3, h4, h5, h6, title, subTitle, body, small }
+enum TextType { h1, h2, h3, h4, h5, h6, title, subTitle, body, small, smallest }
 
 extension TextTypeX on TextType {
   TextStyle get style {
@@ -52,6 +52,10 @@ extension TextTypeX on TextType {
       case TextType.small:
         return const TextStyle(
           fontSize: 13,
+        );
+      case TextType.smallest:
+        return const TextStyle(
+          fontSize: 11,
         );
       default:
         throw StateError('Impossible case');

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/resources/colors.dart';
 import 'package:portfolio/core/resources/text_style.dart';
 import 'package:portfolio/widgets/atoms/avatar.dart';
 import 'package:portfolio/widgets/atoms/background_gradient.dart';
@@ -36,17 +37,17 @@ class AboutWidget extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        TextWidget(
+                        const TextWidget(
                           'About Me\n',
                           textType: TextType.title,
-                          color: Colors.grey[800],
+                          color: AppColors.dark_grey,
                           textAlign: TextAlign.justify,
                         ),
-                        TextWidget(
+                        const TextWidget(
                           "I'm a Developer that felt in love with Mobile "
                           'development',
                           textAlign: TextAlign.center,
-                          color: Colors.grey[800],
+                          color: AppColors.dark_grey,
                         )
                       ],
                     ),
